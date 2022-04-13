@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .jogador {
+            font-size: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border: 2px solid blue;
+            border-radius: 10px;
+            width: 250px;
+            padding: 5px 5px;
+            margin: 30px auto;
+            background-color: aquamarine;
+            box-shadow: 2px 4px 1px 2px blue;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="jogador">
+        <h1> Player 1: David </h1>
+    </div>
+
+    <script>
+
+        const mudar = document.querySelector('h1')
+
+        mudar.addEventListener('click', atualizarNome)
+
+        function atualizarNome() {
+            var nome = prompt("Insira um novo nome: ")
+            mudar.textContent = 'Player 1: ' + nome;
+        }
+
+    </script>
+</body>
+</html>

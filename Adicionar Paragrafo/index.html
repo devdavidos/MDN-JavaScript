@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo aplicando JavaScript</title>
+
+        <style>
+
+            button {
+                color: blue;
+                font-size: 26px;
+                border: 2px solid blueviolet;
+                background-color: aquamarine;
+                box-shadow: 2px 2px 2px 3px blueviolet;
+                border-radius: 3px;
+            }
+
+            p {
+                color: brown;
+                font-weight: 900;
+                font-size: 20px;
+                letter-spacing: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <button>Clique em mim</button>
+
+        <script>
+
+            function criarParagrafo() {
+                let para = document.createElement('p');
+
+                para.textContent = 'Vaaaai Brasiiiil, adooooroo!';
+                document.body.appendChild(para)
+            }
+
+            const botoes = document.querySelectorAll('button');
+
+            for(var i = 0; i < botoes.length; i++) {
+                botoes[i].addEventListener('click', criarParagrafo)
+            }
+            
+        </script>
+    </body>
+</html>
